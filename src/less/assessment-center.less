@@ -1,0 +1,35 @@
+.assessment-center {
+  margin-top: 10px;
+
+  .answer-section {
+    h1 {
+      &:extend(.mui-font-style-headline);
+      padding-top: 0;
+      margin-bottom: 1em;
+    }
+
+    .mui-text-field {
+      margin-bottom: 2em;
+    }
+  }
+
+  .answer-buttons {
+    .make-row();
+
+    .checkbox-wrapper {
+      .make-sm-column(6);
+
+      
+      .hint {
+        display: block;
+        margin-top: -10px;
+      }
+    }
+
+    .btn-wrapper {
+      .make-sm-column(6);
+
+      text-align: right;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+// Bootstrap Grid
+@import "bootstrap-grid";
+
+// Material UI
+@import "scaffolding";
+@import "components";
+@import "typography";
+@import "variables";
+@import (inline) "fonts.css";
+
+// Custom components
+@import "app";
+@import "header";
+@import "assessment-center";
+@import "community-answers";
+
+.question-category {
+  &:extend(.mui-font-style-caption);
+  margin-bottom: 0;
+}
+
+.mui-text-field {
+  .mui-text-field-focus-underline {
+    border-color: @accent-1-color;
+  }
+}
+
+.mui-text-field {
+  width: 100%;
+}

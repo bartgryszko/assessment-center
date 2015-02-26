@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block title %}{% endblock %}
+
+{% block content_wrap %}
+    <div class="col-md-7">
+        <h1>{% block header %}{% endblock %}</h1>
+        {% block content %}{% endblock %}
+    </div>
+{% endblock content_wrap %}

@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load cropping %}
+
+{% block title %}{{ page.title }}{% endblock %}
+
+{% block underhead %}
+    <section class="jumbotron jumbo-small">
+        <div class="container"></div>
+    </section>
+{% endblock underhead %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <h1>{{ page.title }}</h1>
+            <hr />
+            {% if page.image %}
+                <img src="{% cropped_thumbnail page "cropping" %}" alt="" class="img-responsive" />
+            {% endif %}
+            {% autoescape off %}{{ page.text }}{% endautoescape %}
+        </div>
+    </div>
+{% endblock content %}

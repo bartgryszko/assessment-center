@@ -1,0 +1,38 @@
+@community-answers-padding-top: 20px;
+@community-answers-padding-left: 40px;
+@community-answers-padding: @community-answers-padding-top @community-answers-padding-left;
+
+.community-answers {
+  margin-top: 5em;
+  margin-bottom: 3em;
+  background: @grey-50;
+
+  h2 {
+    &:extend(.mui-font-style-title);
+    padding: @community-answers-padding;
+    margin: 0;
+  }
+  
+  .community-answer {
+    .make-row();
+    padding: @community-answers-padding;
+    border-top: 1px @border-color solid;
+    margin: 0;
+
+    .actions {
+      padding-right: @community-answers-padding-left/2;
+      width: 100px;
+      float: left;
+      text-align: center!important;
+    }
+    
+    .user-avatar {
+      border-radius: 50%;
+      width: 40px;
+    }
+
+    .content {
+      float: left;
+    }
+  }
+}
