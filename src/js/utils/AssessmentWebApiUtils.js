@@ -59,7 +59,8 @@ module.exports = {
             type: "POST",
             data: data
         }).done(function (data) {
-            AssesmentServerActionCreators.receiveUserAnswer(answer);
+            console.log(data);
+            AssesmentServerActionCreators.receiveUserAnswer(data);
         }).fail(function (err) {
             console.log('Error while saving', err);
         });
@@ -89,7 +90,7 @@ module.exports = {
      * from INITIAL_DATA, else send action about user is not authenticated
      */
     loadInitialData: function () {
-        var callbacks = INITIAL_DATA.map(function (data) {
+        var callbacks = INITIAL_DATA.map(function (data) {t
                 return data.callback;
             }),
 

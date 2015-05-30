@@ -1,21 +1,75 @@
+@menu-item-padding: 10px;
+@avatar-m: 60px;
+@avatar-s: 40px;
+
 #top-head {
   .make-row();
 
   margin-top: 10px;
 
-  > button {
+  .icon-menu {
     float: left;
+    margin-left: -12px;
   }
 
   .user-login {
-    img {
-      border-radius: 50%;
-      width: 40px;
-      margin-top: 5px;
+    .mui-menu {
+      top: 50px!important;
+      right: 10px!important;
+      width: 250px!important;
+      height: auto!important;
+
+      .mui-menu-item {
+        &:extend(.mui-font-style-body-1);
+
+        color: @primary-1-color;
+        margin: 0;
+        display: block;
+        padding: @menu-item-padding;
+        height: auto;
+        line-height: inherit;
+      }
+
+      a:hover {
+        text-decoration: none;
+      }
     }
 
-    .username {
-      display: none;
+    .mui-subheader {
+      height: auto;
+      line-height: inherit;
+      color: @body-text-color;
+      background: @grey-100;
+      border-bottom: 1px solid @border-color;
+      padding: @menu-item-padding;
+      cursor: default;
+
+      img {
+        margin-right: 1em;
+        width: @avatar-s;
+        float: left;
+      }
+    }
+
+    .mui-menu.mui-menu-hideable.mui-visible > .mui-paper-container {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+    .menu-header {
+      .username {
+        font-weight: bold;
+      }
+
+      .email {
+        margin: 0;
+      }
+    }
+
+    .avatar {
+      border-radius: 50%;
+      width: @avatar-s;
+      margin-top: 5px;
     }
 
     float: right;

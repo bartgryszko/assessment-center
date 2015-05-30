@@ -17,7 +17,6 @@ injectTapEventPlugin();
 
 var App = React.createClass({
     render: function () {
-        var header = <div className="logo">Assessment Center</div>;
         return (
             <div>
                 <AppNav ref="mainNav" />

@@ -5,6 +5,7 @@ from rest_framework.reverse import reverse
 API_ROUTES = (
     ('users', 'user-list'),
     ('user-current', 'user-current'),
+    ('user-categories-selected', 'user-categories-selected'),
     ('questions', 'question-list'),
     ('answers', 'answer-list'),
     ('user-answers', 'user-answer-list'),

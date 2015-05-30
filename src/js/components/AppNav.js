@@ -5,7 +5,7 @@ var React = require('react'),
     LeftNav = require('material-ui').LeftNav,
 
     MENU_ITEMS = [
-        { route: 'assessment', text: 'Assesment' }
+        { route: 'assessment', text: 'Start quiz!' }
     ];
 
 var AppNav = React.createClass({
@@ -20,7 +20,7 @@ var AppNav = React.createClass({
 
     render: function () {
         var header = (<div className="logo"
-            onClick={this._onHeaderClick}>material ui</div>);
+            onClick={this._onHeaderClick}>Assessment Center</div>);
 
         return (
             <LeftNav ref="mainNav"

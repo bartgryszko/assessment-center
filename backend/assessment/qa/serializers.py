@@ -1,7 +1,5 @@
-from django.forms import widgets
 from rest_framework import serializers
 from qa.models import Question, Answer, Category
-from users.models import User
 from users.serializers import UserSerializer
 
 class QuestionSerializer(serializers.ModelSerializer):
@@ -10,8 +8,9 @@ class QuestionSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Question
-        fields = ('url', 'community_answers_url', 'id', 'value', 'slug', 'category', 'user',
-                  'is_accepted', 'created_at')
+        fields = ('url', 'community_answers_url', 'id', 'value', 'slug',
+                  'category', 'user', 'is_accepted', 'created_at')
+
 
 class AnswerSerializer(serializers.ModelSerializer):
     user = serializers.PrimaryKeyRelatedField(read_only=True,
@@ -22,6 +21,7 @@ class AnswerSerializer(serializers.ModelSerializer):
         fields = ('url', 'id', 'question', 'user', 'value',
                   'edited_at', 'is_public', 'created_at')
 
+
 class CommunityAnswerSerializer(serializers.ModelSerializer):
     user = UserSerializer(read_only=True)
 
@@ -29,6 +29,7 @@ class CommunityAnswerSerializer(serializers.ModelSerializer):
         model = Answer
         fields = ('url', 'id', 'question', 'user', 'value',
                   'edited_at', 'is_public', 'created_at')
+
 
 class CategorySerializer(serializers.ModelSerializer):
     class Meta:

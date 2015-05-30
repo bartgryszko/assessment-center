@@ -29,6 +29,7 @@ class User(AbstractUser):
     avatar_image = models.ImageField(blank=True, null=True,
                                      upload_to=path_and_rename('avatars/'))
     avatar_cropping = ImageRatioField('avatar_image', '300x300')
+    selected_categories = models.ManyToManyField('qa.Category', blank=True)
 
     @property
     def avatar(self):

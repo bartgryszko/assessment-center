@@ -24,7 +24,7 @@ var CommunityAnswersSection = React.createClass({
             });
         } else {
             answers = (
-                <div className="no-answers">
+                <div className="community-answers-zero">
                     There are no community answers yet. Be the first to share your answer!
                 </div>
             )

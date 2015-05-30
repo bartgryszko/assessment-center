@@ -4,10 +4,10 @@ var AppDispatcher = require('../dispatcher/AppDispatcher'),
     ActionTypes = require('../constants/Constants').ActionTypes;
 
 module.exports = {
-    receiveUserAnswer: function (value) {
+    receiveUserAnswer: function (data) {
         AppDispatcher.handleServerAction({
             type: ActionTypes.USER_ANSWER_SAVE_SUCCESS,
-            value: value
+            data: data
         });
     },
 
